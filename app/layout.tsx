@@ -12,7 +12,7 @@ export default function RootLayout({
     <html lang="en" className={openSans.className}>
       <body
         className="antialiased bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/background.webp')" }}
+        style={{}}
       >
         {children}
       </body>
