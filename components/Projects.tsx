@@ -18,19 +18,35 @@ const Projects = () => {
       title: "L'interface mobile-first sur mesure!",
       description:
         "Intégrer Oh My Food a été un vrai terrain de jeu! En tirant parti de HTML, CSS et du préprocesseur Sass pour une architecture de styles robuste et maintenable. L'ajout d'animations CSS a permis de dynamiser l'expérience utilisateur et de créer une navigation intuitive.",
-      image: '/assets/omff.png',
+      image: '/assets/omf.webp',
       previewLink: '#',
       sourceCodeLink: '#',
       technologies: ['HTML', 'CSS', 'Sass', 'Animations CSS'],
     },
     {
-      title: 'Personal Projet',
+      title: 'KASA',
       description:
-        'Projet que je vais realiser avec tailwind et nextjs et React. Application de qualité et dynamique.',
-      image: '/assets/kas.png',
+        'Kasa est un site qui permet une navigation intuituve et simplifiée : une bonne vision des logements proposés, des bonnes pratiques de développement respectées et une architecture classique. Ce projet est un vrai défi à la fois de style et de fonctionnalité.',
+      image: '/assets/kasa.webp',
       previewLink: '#',
       sourceCodeLink: 'https://github.com/dorea5/KASA',
       technologies: ['React', 'Next.js', 'Tailwind CSS'],
+    },
+    {
+      title: 'Trouver son hébergement avec Booki',
+      description: "Booki permet au client de réserver un logement en fonction de la localisation. Il est particulièrement bien pensé au niveau du resposive et de l'inteface générale. C'est un site moderne et sobre qui permet une prise en main facile.",
+      image: '/assets/booki.webp',
+      previewLink: '#',
+      sourceCodeLink: '#',
+      technologies: ['HTML', 'SASS'],
+    },
+    {
+      title: 'La galerie de Sophie Bluel',
+      description: "Composé de plusieurs rubriques et option de filtrage, ce portfolio au dynamisme intelligent permet d'apprécier toutes les oeuvres présentées par l'architecte. Des options de suppression & ajout de photos permettent de personnaliser la galerie davantage.",
+      image: '/assets/sophie.webp',
+      previewLink: '#',
+      sourceCodeLink: '#',
+      technologies: ['JavaScript', 'Node.JS ', 'API Swagger'],
     },
   ];
 
@@ -56,7 +72,7 @@ const Projects = () => {
     <section id="projects" className="py-16 bg-white">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl font-bold mb-8 text-center text-blue-800">
-          ‍ Projets
+          PROJETS
         </h2>
         <div className="relative">
           <div className="overflow-hidden">
@@ -67,7 +83,7 @@ const Projects = () => {
               {projects.map((project, index) => (
                 <div key={index} className="w-full flex-shrink-0 p-6">
                   <div className="bg-white rounded-lg shadow-md p-6 h-[600px] flex flex-col">
-                    <div className="overflow-hidden mb-4 flex-grow">
+                    <div className="overflow-hidden mb-4 h-64"> {/* Hauteur fixe pour l'image */}
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -77,8 +93,12 @@ const Projects = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-teal-500">{project.title}</h3>
-                    <p className="mb-4">{project.description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-teal-500 h-12 overflow-hidden"> {/* Hauteur fixe pour le titre */}
+                      {project.title}
+                    </h3>
+                    <p className="mb-4 h-24 overflow-hidden"> {/* Hauteur fixe pour la description */}
+                      {project.description}
+                    </p>
                     <div className="flex flex-wrap mb-4">
                       {project.technologies.map((tech, techIndex) => (
                         <span
@@ -115,12 +135,14 @@ const Projects = () => {
           <button
             onClick={goToPrevious}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full"
+            aria-label="Projet précédent"
           >
             <FaChevronLeft size={24} color="black" />
           </button>
           <button
             onClick={goToNext}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full"
+            aria-label="Projet suivant"
           >
             <FaChevronRight size={24} color="black" />
           </button>

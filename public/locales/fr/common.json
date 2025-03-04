@@ -1,9 +1,24 @@
 {
-  "bonjour": "Bonjour",
-  "je_mappelle": "Je m'appelle",
-  "developpeuse_front_end": "Développeuse Front-End",
-  "specialisee_react": "Spécialisée React",
-  "en_savoir_plus": "En savoir plus",
-  "a_propos": "À propos",
-  "projets": "Projets"
+  "about": "À propos",
+  "hero": {
+    "greeting": "Bonjour ",
+    "name": "Je m'appelle",
+    "title": " Développeuse Front-End",
+    "specialization": "⚛️ Spécialisée React",
+    "learnMore": "En savoir plus"
+  },
+  "projects": "PROJETS",
+  "contact": "Contactez-moi ",
+  "send": "Envoyer le message",
+  "name": "Votre nom",
+  "email": "Votre email",
+  "message": "Votre message",
+  "cv": "CV",
+  "aboutMe": "À PROPOS DE MOI",
+  "description1": "Développeuse front-end passionnée par la création d'interfaces utilisateur intuitives et performantes. Spécialisée dans le développement d'applications web modernes avec React, JavaScript et CSS. Animée par l'apprentissage, j'aime les projets stimulants qui me permettent de m'épanouir dans mon travail. Mon portfolio témoigne de mon engagement à fournir un travail qualitatif, centré sur l'utilisateur. N'hésitez pas à explorer mes projets et à me contacter pour discuter de vos idées !",
+  "description2": "Paris | ️ Passionnée de nature & randonnée ️",
+  "previousProject": "Projet précédent",
+  "nextProject": "Projet suivant",
+  "preview": "Aperçu",
+  "sourceCode": "Code Source"
 }

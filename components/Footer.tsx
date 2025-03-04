@@ -12,6 +12,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:text-blue-800 transition duration-300"
+            aria-label="LinkedIn de Doréa Mokhtari"
           >
             <FaLinkedin size={28} />
           </a>
@@ -20,6 +21,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-800 hover:text-gray-900 transition duration-300"
+            aria-label="GitHub de Doréa Mokhtari"
           >
             <FaGithub size={28} />
           </a>

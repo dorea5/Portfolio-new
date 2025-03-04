@@ -19,7 +19,7 @@ const About = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          À propos de moi
+          À PROPOS DE MOI
         </motion.h2>
         <div className="flex flex-col md:flex-row items-center justify-center">
           <motion.div
@@ -29,7 +29,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <Image
-              src="/assets/profile.png"
+              src="/assets/profil.webp"
               alt="Profile"
               width={300}
               height={300}
