@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #e0f7fa;
-  --foreground: #03a9f4;
-}
+  --background: #F3E7E7;
+  --foreground: #DCB1B1;
 
-.bg-gradient-custom {
-  background-image: linear-gradient(to right, #e0f7fa, #03a9f4);
 }
