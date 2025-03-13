@@ -5,5 +5,25 @@
 :root {
   --background: #F3E7E7;
   --foreground: #DCB1B1;
+}
+
+.bg-gradient-custom {
+  background-image: linear-gradient(to right, #e0f7fa, #03a9f4);
+}
+
+.height {
+  height: revert-layer;
+}
+
+.centered {
+
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.bold {
+  font-size: 4.5em;
+  margin-right: 4em;
 
 }

@@ -14,7 +14,7 @@ const About = () => {
     >
       <div className="container mx-auto text-center">
         <motion.h2
-          className="text-3xl font-bold mb-8 text-blue-800"
+          className="text-3xl font-bold mb-8 text-[#f8a2f3]"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -50,14 +50,14 @@ const About = () => {
               Mon portfolio témoigne de mon engagement à fournir un travail qualitatif, centré sur l&#39;utilisateur.
               N&#39;hésitez pas à explorer mes projets et à me contacter pour discuter de vos idées !
             </p>
-            <p className="mb-4">📍Paris | ️ Passionnée de nature & randonnée 🏔️</p>
+            <p className="mb-4">📍Paris | ️ Mes passions : 🏔️Randonnée ⸱ 🎮Jeux vidéos ⸱ 🧑🏻‍🎨Histoire de l&#39;Art </p>
             <a
               href="/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600"
+              className="bg-white text-[#f8a2f3] border border-[#f8a2f3] py-2 px-4 rounded-lg hover:bg-gradient-to-r from-[#f8a2f3] to-[#f06292] hover:text-white transition duration-300 flex items-center justify-center"
             >
-              CV
+              Cliquez ici pour télécharger mon CV 🚀
             </a>
           </motion.div>
         </div>

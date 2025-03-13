@@ -1,30 +1,61 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
+  const [confirmationMessage, setConfirmationMessage] = useState('');
+
+  emailjs.init('793Cf0MiIgiiaoPr_');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    //  ajouter la logique pour envoyer le formulaire (par exemple  via  API)
-    console.log('Formulaire soumis:', formData);
-    // Réinitialiser le formulaire après la soumission
-    setFormData({ name: '', email: '', message: '' });
+
+    console.log("Formulaire soumis: ", formData);
+    console.log("form.current: ", form.current);
+
+    if (form.current) {
+      try {
+        console.log("Envoi du formulaire à EmailJS...");
+        const result = await emailjs.sendForm(
+          'service_vbzak7b',
+          'template_kfrs48k',
+          form.current
+        );
+        console.log('Email envoyé avec succès:', result.text);
+        setConfirmationMessage('Votre message a été envoyé avec succès!');
+        setTimeout(() => setConfirmationMessage(''), 3000);
+        setFormData({ name: '', email: '', message: '' });
+      } catch (error) {
+        console.error('Erreur lors de l\'envoi de l\'e-mail:', error);
+        alert('Une erreur est survenue lors de l\'envoi du message.');
+      }
+    } else {
+      console.error('Le formulaire n\'est pas correctement référencé.');
+      alert('Une erreur est survenue lors de l\'envoi du message.');
+    }
   };
 
   return (
     <section id="contact" className="py-16 bg-white">
       <div className="container mx-auto text-center max-w-xl">
-        <h2 className="text-3xl font-bold mb-8 text-blue-800">Contactez-moi 📧 </h2>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <h2 className="text-3xl font-bold mb-8 text-[#f8a2f3]">Contactez-moi </h2>
+        {confirmationMessage && (
+          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+            <strong className="font-bold">Succès !</strong>
+            <span className="block sm:inline">{confirmationMessage}</span>
+          </div>
+        )}
+        <form ref={form} onSubmit={handleSubmit} className="space-y-6">
           <div>
             <input
               type="text"
