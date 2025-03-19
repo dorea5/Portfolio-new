@@ -3,12 +3,20 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  previewLink: string;
+  sourceCodeLink: string;
+  technologies: string[];
+}
+
 const Projects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       title: 'Argent Bank : votre application bancaire simplifiée',
-      description:
-        "Argent Bank est une application web bancaire conçue pour offrir une expérience utilisateur fluide et intuitive. Développée avec React pour une interface dynamique et Redux pour une gestion efficace des données, l'application permet aux utilisateurs de consulter leurs comptes, effectuer des virements et gérer leurs finances en toute simplicité.",
+      description: "Argent Bank est une application web bancaire conçue pour offrir une expérience utilisateur fluide et intuitive. Développée avec React pour une interface dynamique et Redux pour une gestion efficace des données, l'application permet aux utilisateurs de consulter leurs comptes, effectuer des virements et gérer leurs finances en toute simplicité.",
       image: '/assets/argent.webp',
       previewLink: '#',
       sourceCodeLink: 'https://github.com/dorea5/ProjetBankOp',
@@ -16,8 +24,7 @@ const Projects = () => {
     },
     {
       title: "L'interface mobile-first sur mesure!",
-      description:
-        "Intégrer Oh My Food a été un vrai terrain de jeu! En tirant parti de HTML, CSS et du préprocesseur Sass pour une architecture de styles robuste et maintenable. L'ajout d'animations CSS a permis de dynamiser l'expérience utilisateur et de créer une navigation intuitive.",
+      description: "Intégrer Oh My Food a été un vrai terrain de jeu! En tirant parti de HTML, CSS et du préprocesseur Sass pour une architecture de styles robuste et maintenable. L'ajout d'animations CSS a permis de dynamiser l'expérience utilisateur et de créer une navigation intuitive.",
       image: '/assets/omf.webp',
       previewLink: '#',
       sourceCodeLink: '#',
@@ -25,8 +32,7 @@ const Projects = () => {
     },
     {
       title: 'KASA',
-      description:
-        'Kasa est un site qui permet une navigation intuituve et simplifiée : une bonne vision des logements proposés, des bonnes pratiques de développement respectées et une architecture classique. Ce projet est un vrai défi à la fois de style et de fonctionnalité.',
+      description: 'Kasa est un site qui permet une navigation intuituve et simplifiée : une bonne vision des logements proposés, des bonnes pratiques de développement respectées et une architecture classique. Ce projet est un vrai défi à la fois de style et de fonctionnalité.',
       image: '/assets/kasa.webp',
       previewLink: '#',
       sourceCodeLink: 'https://github.com/dorea5/KASA',
@@ -47,6 +53,22 @@ const Projects = () => {
       previewLink: '#',
       sourceCodeLink: '#',
       technologies: ['JavaScript', 'Node.JS ', 'API Swagger'],
+    },
+    {
+      title: 'Nina Carducci SEO',
+      description: "Faire une optimisation globale du site tant sur les performances que sur le SEO, mettre en place le référencement local ,ajouter les metas pour les réseaux sociaux, faire les modifications liées à laccessibilité du site,produire un rapport d'optimisation présentant toutes vos actions et leur impact.",
+      image: '/assets/nina.webp',
+      previewLink: '#',
+      sourceCodeLink: 'https://github.com/votre-nom/nouveau-projet-1',
+      technologies: ['Google LightHouse', 'Wave', 'Schema.org'],
+    },
+    {
+      title: 'Gestion de projet',
+      description: "Entreprendre une veille technologique pour rester informé des dernières tendances et technologies pertinentes pour le projet, Rédiger les spécifications techniques du projet : identification des besoins fonctionnels et la décomposition des fonctionnalités en tâches spécifiques. Utilisation d'outils de gestion de projet, comme Notion, pour organiser le projet et créer un tableau Kanban.",
+      image: '/assets/qwenta.png',
+      previewLink: '#',
+      sourceCodeLink: 'https://github.com/votre-nom/nouveau-projet-2',
+      technologies: ['Notion', 'Trello'],
     },
   ];
 
@@ -71,8 +93,8 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 bg-white">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl font-bold mb-8 text-center text-[#f8a2f3]">
-          PROJETS
+        <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-[#f8a2f3] to-[#f06292] text-transparent bg-clip-text">
+          QUELQUES PROJETS
         </h2>
         <div className="relative">
           <div className="overflow-hidden">
@@ -83,7 +105,7 @@ const Projects = () => {
               {projects.map((project, index) => (
                 <div key={index} className="w-full flex-shrink-0 p-6">
                   <div className="bg-white rounded-lg shadow-md p-6 h-[600px] flex flex-col">
-                    <div className="overflow-hidden mb-4 h-64"> {/* Hauteur fixe pour l'image */}
+                    <div className="overflow-hidden mb-4 h-64">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -93,17 +115,17 @@ const Projects = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-teal-500 h-12 overflow-hidden"> {/* Hauteur fixe pour le titre */}
+                    <h3 className="text-xl font-semibold mb-2 text-[#9370DB] h-12 overflow-hidden">
                       {project.title}
                     </h3>
-                    <p className="mb-4 h-24 overflow-hidden"> {/* Hauteur fixe pour la description */}
+                    <p className="mb-4 h-24 overflow-hidden text-justify">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap mb-4">
-                      {project.technologies.map((tech, techIndex) => (
+                      {project.technologies.map((tech: string, techIndex: number) => (
                         <span
                           key={techIndex}
-                          className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full mb-2"
+                          className="bg-[#E0B0FF]/20 text-[#9370DB] text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full mb-2"
                         >
                           {tech}
                         </span>
@@ -114,7 +136,7 @@ const Projects = () => {
                         href={project.previewLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600"
+                        className="bg-gradient-to-r from-[#9370DB] to-[#E0B0FF] text-white py-2 px-4 rounded-lg hover:brightness-110 transition duration-300"
                       >
                         Aperçu
                       </a>
@@ -122,7 +144,7 @@ const Projects = () => {
                         href={project.sourceCodeLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-teal-500 hover:text-teal-600"
+                        className="text-[#9370DB] hover:text-[#E0B0FF] transition duration-300"
                       >
                         Code Source
                       </a>
@@ -134,17 +156,17 @@ const Projects = () => {
           </div>
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full"
+            className="absolute left-[-50px] top-1/2 transform -translate-y-1/2 p-3 rounded-full transition-transform duration-300 hover:scale-110 animate-pulse-balloon"
             aria-label="Projet précédent"
           >
-            <FaChevronLeft size={24} color="black" />
+            <FaChevronLeft size={30} color="#9370DB" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full"
+            className="absolute right-[-50px] top-1/2 transform -translate-y-1/2 p-3 rounded-full transition-transform duration-300 hover:scale-110 animate-pulse-balloon"
             aria-label="Projet suivant"
           >
-            <FaChevronRight size={24} color="black" />
+            <FaChevronRight size={30} color="#9370DB" />
           </button>
         </div>
       </div>

@@ -48,7 +48,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 bg-white">
       <div className="container mx-auto text-center max-w-xl">
-        <h2 className="text-3xl font-bold mb-8 text-[#f8a2f3]">Contactez-moi </h2>
+        <h2 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-[#9370DB] to-[#E0B0FF] text-transparent bg-clip-text">Contactez-moi </h2> <span className="emailemoji text-4xl"></span>
         {confirmationMessage && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
             <strong className="font-bold">Succès !</strong>

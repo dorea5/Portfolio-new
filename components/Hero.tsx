@@ -18,8 +18,8 @@ const Hero = () => {
             alt="ordinateur"
             width={250} // Taille réduite
             height={150} // Taille réduite
-            className="rounded-lg mb-6"
-            style={{ objectFit: 'cover' }}
+            className="rounded-lg mb-6 img-computer"
+            style={{ objectFit: 'cover', height: 'fit-content' }}
           />
           <motion.h1
             initial={{ opacity: 0 }}
@@ -34,7 +34,7 @@ const Hero = () => {
               transition={{ duration: 1, repeat: Infinity }}
             >
             </motion.span><br />
-            Je suis <span className="text-[#f8a2f3]">Doréa Mokhtari</span>
+            Bienvenue dans mon <span className="text-[#f8a2f3]"> portfolio !</span>
           </motion.h1>
         </div>
         <motion.p
@@ -43,7 +43,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className={`${montserrat.className} text-2xl mb-8 text-black`}
         >
-          ✨Développeuse Front-End, ⚛️Spécialisée React
+          Je suis : ✨Développeuse Front-End ⚛️Spécialisée React
         </motion.p>
         <motion.a
           href="#about"
@@ -53,8 +53,8 @@ const Hero = () => {
           whileHover={{ scale: 1.1, x: 5 }}
           whileTap={{ scale: 0.9 }}
           className={`px-8 py-4 rounded-full text-lg font-bold transition duration-300 ${isHovered
-            ? 'bg-[#f8a2f3] text-white'
-            : 'bg-[#3f7efa] text-white'
+            ? 'bg-[#9370DB] text-white'
+            : 'bg-gradient-to-r from-[#9370DB] to-[#E0B0FF] text-white'
             }`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}

@@ -14,7 +14,7 @@ const Experience = () => {
             height={65}
             style={{ marginBottom: '1rem' }}
           />
-          <h2 className="text-3xl font-bold text-[#f8a2f3]">Expérience</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-[#f8a2f3] to-[#f06292] text-transparent bg-clip-text">EXPERIENCE</h2>
         </div>
         <div className="max-w-4xl mx-auto border border-blue-900 rounded-lg p-8 shadow-md">
           <div className="mb-8 text-lg text-gray-700 text-justify">
