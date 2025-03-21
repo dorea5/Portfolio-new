@@ -25,16 +25,16 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className={`${montserrat.className} bold font-bold mb-6 leading-tight text-black`}
+            className={`${montserrat.className} bold sm:normal-font font-bold mb-6 leading-tight text-black`}
           >
-            Bonjour 👋
+            👋
             <motion.span
               className="inline-block"
               animate={{ rotate: [0, 30, -30, 0] }}
               transition={{ duration: 1, repeat: Infinity }}
             >
             </motion.span><br />
-            Bienvenue dans mon <span className="text-[#f8a2f3]"> portfolio !</span>
+            Bienvenue sur mon <span className="text-[#f8a2f3]"> portfolio !</span>
           </motion.h1>
         </div>
         <motion.p
