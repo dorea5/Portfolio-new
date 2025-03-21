@@ -140,14 +140,7 @@ const Projects = () => {
                       >
                         Aperçu
                       </a>
-                      <a
-                        href={project.sourceCodeLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#9370DB] hover:text-[#E0B0FF] transition duration-300"
-                      >
-                        Code Source
-                      </a>
+
                     </div>
                   </div>
                 </div>
