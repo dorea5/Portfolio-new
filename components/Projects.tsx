@@ -18,7 +18,7 @@ const Projects = () => {
       title: 'Argent Bank : votre application bancaire simplifiée',
       description: "Argent Bank est une application web bancaire conçue pour offrir une expérience utilisateur fluide et intuitive. Développée avec React pour une interface dynamique et Redux pour une gestion efficace des données, l'application permet aux utilisateurs de consulter leurs comptes, effectuer des virements et gérer leurs finances en toute simplicité.",
       image: '/assets/argent.webp',
-      previewLink: 'https://github.com/dorea5/ProjetBankOp',
+      previewLink: '#',
       sourceCodeLink: 'https://github.com/dorea5/ProjetBankOp',
       technologies: ['React', 'Redux', 'JavaScript', 'CSS'],
     },
@@ -26,7 +26,7 @@ const Projects = () => {
       title: "L'interface mobile-first sur mesure!",
       description: "Intégrer Oh My Food a été un vrai terrain de jeu! En tirant parti de HTML, CSS et du préprocesseur Sass pour une architecture de styles robuste et maintenable. L'ajout d'animations CSS a permis de dynamiser l'expérience utilisateur et de créer une navigation intuitive.",
       image: '/assets/omf.webp',
-      previewLink: 'https://github.com/dorea5/OpenclassroomsProjet4',
+      previewLink: '#',
       sourceCodeLink: '#',
       technologies: ['HTML', 'CSS', 'Sass', 'Animations CSS'],
     },
@@ -34,11 +34,18 @@ const Projects = () => {
       title: 'KASA',
       description: 'Kasa est un site qui permet une navigation intuituve et simplifiée : une bonne vision des logements proposés, des bonnes pratiques de développement respectées et une architecture classique. Ce projet est un vrai défi à la fois de style et de fonctionnalité.',
       image: '/assets/kasa.webp',
-      previewLink: 'https://github.com/dorea5/KASA',
+      previewLink: '#',
       sourceCodeLink: 'https://github.com/dorea5/KASA',
       technologies: ['React', 'Next.js', 'Tailwind CSS'],
     },
-
+    {
+      title: 'Trouver son hébergement avec Booki',
+      description: "Booki permet au client de réserver un logement en fonction de la localisation. Il est particulièrement bien pensé au niveau du resposive et de l'inteface générale. C'est un site moderne et sobre qui permet une prise en main facile.",
+      image: '/assets/booki.webp',
+      previewLink: '#',
+      sourceCodeLink: '#',
+      technologies: ['HTML', 'SASS'],
+    },
     {
       title: 'La galerie de Sophie Bluel',
       description: "Composé de plusieurs rubriques et option de filtrage, ce portfolio au dynamisme intelligent permet d'apprécier toutes les oeuvres présentées par l'architecte. Des options de suppression & ajout de photos permettent de personnaliser la galerie davantage.",
@@ -51,17 +58,9 @@ const Projects = () => {
       title: 'Nina Carducci SEO',
       description: "Faire une optimisation globale du site tant sur les performances que sur le SEO, mettre en place le référencement local ,ajouter les metas pour les réseaux sociaux, faire les modifications liées à laccessibilité du site,produire un rapport d'optimisation présentant toutes vos actions et leur impact.",
       image: '/assets/nina.webp',
-      previewLink: 'https://github.com/dorea5/Referencement-Nina-Carducci',
+      previewLink: '#',
       sourceCodeLink: 'https://github.com/votre-nom/nouveau-projet-1',
       technologies: ['Google LightHouse', 'Wave', 'Schema.org'],
-    },
-    {
-      title: 'Trouver son hébergement avec Booki',
-      description: "Booki permet au client de réserver un logement en fonction de la localisation. Il est particulièrement bien pensé au niveau du resposive et de l'inteface générale. C'est un site moderne et sobre qui permet une prise en main facile.",
-      image: '/assets/booki.webp',
-      previewLink: '#',
-      sourceCodeLink: '#',
-      technologies: ['HTML', 'SASS'],
     },
     {
       title: 'Gestion de projet',
@@ -141,7 +140,14 @@ const Projects = () => {
                       >
                         Aperçu
                       </a>
-
+                      <a
+                        href={project.sourceCodeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#9370DB] hover:text-[#E0B0FF] transition duration-300"
+                      >
+                        Code Source
+                      </a>
                     </div>
                   </div>
                 </div>
