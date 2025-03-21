@@ -48,7 +48,7 @@ const Avenir = () => {
             </div>
             <div className="text-center flex-grow flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-semibold mb-2">Boutique en ligne d&#39;accessoires mode</h3>
+                <h3 className="text-2xl font-semibold mb-2">Création d&#39;une boutique en ligne d&#39;accessoires mode</h3>
                 <p className="text-lg text-gray-700 text-justify">
                   Création d&#39;un site web marchand pour un jeune entrepreneur souhaitant promouvoir sa nouvelle marque de casquettes à Levallois-Perret. Ce projet mettra en avant ses créations uniques et offrira une expérience d&#39;achat en ligne fluide.
                 </p>
