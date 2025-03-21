@@ -11,7 +11,7 @@ import Avenir from '@/components/Avenir';
 
 export default function Home() {
   return (
-    <main >
+    <main className='margin-global' >
       <Header />
       <Hero />
       <About />

@@ -8,7 +8,9 @@
 }
 
 
-
+.margin-global {
+  margin: 1em;
+}
 
 .bg-gradient-custom {
   background-image: linear-gradient(to right, #e0f7fa, #03a9f4);
