@@ -18,9 +18,18 @@ const Projects = () => {
       title: 'Argent Bank : votre application bancaire simplifiée',
       description: "Argent Bank est une application web bancaire conçue pour offrir une expérience utilisateur fluide et intuitive. Développée avec React pour une interface dynamique et Redux pour une gestion efficace des données, l'application permet aux utilisateurs de consulter leurs comptes, effectuer des virements et gérer leurs finances en toute simplicité.",
       image: '/assets/argent.webp',
-      previewLink: '#',
+      previewLink: 'https://github.com/dorea5/ProjetBankOp',
       sourceCodeLink: 'https://github.com/dorea5/ProjetBankOp',
       technologies: ['React', 'Redux', 'JavaScript', 'CSS'],
+    },
+
+    {
+      title: 'KASA',
+      description: 'Kasa est un site qui permet une navigation intuituve et simplifiée : une bonne vision des logements proposés, des bonnes pratiques de développement respectées et une architecture classique. Ce projet est un vrai défi à la fois de style et de fonctionnalité.',
+      image: '/assets/kasa.webp',
+      previewLink: 'https://github.com/dorea5/KASA',
+      sourceCodeLink: 'https://github.com/dorea5/KASA',
+      technologies: ['React', 'Next.js', 'Tailwind CSS'],
     },
     {
       title: "L'interface mobile-first sur mesure!",
@@ -29,14 +38,6 @@ const Projects = () => {
       previewLink: '#',
       sourceCodeLink: '#',
       technologies: ['HTML', 'CSS', 'Sass', 'Animations CSS'],
-    },
-    {
-      title: 'KASA',
-      description: 'Kasa est un site qui permet une navigation intuituve et simplifiée : une bonne vision des logements proposés, des bonnes pratiques de développement respectées et une architecture classique. Ce projet est un vrai défi à la fois de style et de fonctionnalité.',
-      image: '/assets/kasa.webp',
-      previewLink: '#',
-      sourceCodeLink: 'https://github.com/dorea5/KASA',
-      technologies: ['React', 'Next.js', 'Tailwind CSS'],
     },
     {
       title: 'Trouver son hébergement avec Booki',
