@@ -8,9 +8,7 @@
 }
 
 
-.global-margin {
-  margin: 2em;
-}
+
 
 .bg-gradient-custom {
   background-image: linear-gradient(to right, #e0f7fa, #03a9f4);
@@ -39,11 +37,4 @@
   top: 102.8em;
   right: 12.3em;
 
-}
-
-
-@media (max-width: 750px) {
-  .bold {
-    font-size: inherit;
-  }
 }
